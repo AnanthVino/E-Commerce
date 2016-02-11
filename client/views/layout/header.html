@@ -1,0 +1,60 @@
+<Template name="header_layout">
+    <div class="navbar navbar-custom">    
+        <ol class="breadcrumb pull-right">
+            {{#if currentUser}}
+                <li><a href="/signup">SIGNOUT</a></li>
+            {{else}}
+                <li><a href="/signup">SIGNUP</a></li>
+                <li><a href="/login">LOGIN</a></li>
+            {{/if}}
+        </ol>
+        <form class="navbar-form navbar-search" role="search">
+            <span class="heading ml35 mt35">FLIPKART</span>
+            <div class="input-group search-box ml60 mt35">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-search dropdown-toggle" data-toggle="dropdown">
+                        <span class="label-icon">ALL</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu pull-left" role="menu">
+                       
+                    </ul>
+                </div>
+    
+                <input type="text" class="form-control">
+            
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-search">
+                    SEARCH
+                    </button>  
+                </div>
+            </div>  
+            <button type="button" class="btn btn-md cart mt35">
+                <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Cart
+            </button>
+        </form>   
+    </div>
+    <div class="collapse navbar-collapse mb50" id="navbar_collapse">
+        <ul class="nav navbar-nav ml230">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ELECTRONICS <span class="caret"></span></a>
+                <div class="dropdown-menu"><h1>ANANTH VINOTH</h1>
+        <!-- <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 4</a></li>
+        <li><a href="">Item 5</a></li> -->
+      </div>
+            </li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">MEN <span class="caret"></span></a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">WOMEN<span class="caret"></span></a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">BABY&KIDS<span class="caret"></span></a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">HOME&FURNITURE<span class="caret"></span></a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">BOOKS<span class="caret"></span></a></li>
+            <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">SPORTS<span class="caret"></span></a></li>
+        </ul>
+    </div>
+
+    <section id="main" role="main">
+        {{> yield}}    
+    </section> 
+</Template>
