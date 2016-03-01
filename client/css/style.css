@@ -59,6 +59,11 @@ body
 	font-weight: bold;
 }
 
+.dropdown-menu > li.kopie > a 
+{
+    padding-left: 5px;
+}
+
 /*SIGNUP FORM CSS*/
 .main 
 {
